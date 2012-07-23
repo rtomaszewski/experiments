@@ -35,11 +35,14 @@ DEFAULT_CLOUD_SERVER={
     }
 }
 
+def get_debug():
+    return DEBUG
+
 def log(message):
     print message 
 
-def debug(message, debug=DEBUG):
-    if debug==1:
+def debug(message):
+    if DEBUG>0:
         log("debug[%2d]: " % DEBUG + message)
 
 def usage(message=None):
@@ -63,7 +66,7 @@ def usage(message=None):
         # json specification used to create a cloud sever if no -c option is specified  
         {
             "server" : {
-                "name" : "mytest%d",
+                "name" : "mytest",
                 "imageId" : 112,
                 "flavorId" : 1,
                 "metadata" : {
@@ -178,11 +181,12 @@ def create_cloud_server (token, mgmt_url, nr, cs=DEFAULT_CLOUD_SERVER):
     debug_http_response(res)
         
     payload= res.read()
+    tmp=json.dumps(json.loads(payload), indent=1)
     
     if DEBUG:
-        debug_paylaod(payload)
+        debug_paylaod(tmp)
     else:
-        log(payload)
+        log(tmp)
         
     conn.close()
 
@@ -200,6 +204,7 @@ def main():
     
     for o, val in optlist:
         if o == "-v":
+            global DEBUG; 
             DEBUG = 1
         elif o == "-h":
             usage()
@@ -211,8 +216,11 @@ def main():
         else:
             assert False, "unhandled option"
             
-    debug("user: <" + user + "> key: <" + key + ">")
-        
+    debug("user: <" + str(user) + "> key: <" + str(key) + ">")
+
+    if len(args) == 0: 
+        usage("missing arguments")
+        sys.exit()    
     if args[0] == "help":
         usage("displaying help")
         sys.exit()    
