@@ -17,4 +17,15 @@ Usualy it is not necessry to write code on such a low level. There is a python l
   * Next Gen Cloud (base on Openstack)
   [ python-novaclient ] (https://github.com/openstack/python-novaclient)
 
-## others
+## bad_program.c
+  * [Automatic debugging session of a programs in C and the gdb analyse of its core dumps] (http://rtomaszewski.blogspot.co.uk/2011/05/automatic-debugging-session-of-programs.html )
+
+## db2-cfg-info.pl
+ * [Configuration Management and DB2 parameters] (http://rtomaszewski.blogspot.co.uk/2009/11/configuration-management-and-db2.html)
+
+## mytcpdump.sh
+ * [tcpdump wrapper for all network and systems troubleshooter] (http://rtomaszewski.blogspot.co.uk/2011/03/tcpdump-wrapper-for-all-network-and.html)
+
+## parse.py
+ * [How to filter and dump in clear text http requests and responses from the network dump using the cli program tshark ] ( http://rtomaszewski.blogspot.co.uk/2011/04/how-to-filter-and-dump-in-clear-text.html )
+
