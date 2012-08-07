@@ -29,3 +29,5 @@ Usualy it is not necessry to write code on such a low level. There is a python l
 ## parse.py
  * [How to filter and dump in clear text http requests and responses from the network dump using the cli program tshark ] ( http://rtomaszewski.blogspot.co.uk/2011/04/how-to-filter-and-dump-in-clear-text.html )
 
+## firstgen_example.py and nova_example.py
+ * [Basic tutorial on how to connect and debug Cloud API for the NextGene (Openstack based) or FirsGen (build by Mosso) Rackspace cloud infrastructure] ( http://rtomaszewski.blogspot.co.uk/2012/08/basic-tutorial-on-how-to-connect-and.html )
