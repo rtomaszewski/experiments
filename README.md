@@ -31,3 +31,6 @@ Usualy it is not necessry to write code on such a low level. There is a python l
 
 ## firstgen_example.py and nova_example.py
  * [Basic tutorial on how to connect and debug Cloud API for the NextGene (Openstack based) or FirsGen (build by Mosso) Rackspace cloud infrastructure] ( http://rtomaszewski.blogspot.co.uk/2012/08/basic-tutorial-on-how-to-connect-and.html )
+
+## sslAnalyze.py
+ * [How to calculate a number of new SSL/TCP connections per every 10ms] (http://rtomaszewski.blogspot.co.uk/2012/08/how-to-calculate-number-of-new-ssltcp.html)
