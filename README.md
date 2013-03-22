@@ -34,3 +34,6 @@ Usualy it is not necessry to write code on such a low level. There is a python l
 
 ## sslAnalyze.py
  * [How to calculate a number of new SSL/TCP connections per every 10ms] (http://rtomaszewski.blogspot.co.uk/2012/08/how-to-calculate-number-of-new-ssltcp.html)
+
+## shadow_pass.sh
+ * [How to manually create shadow password for a user in Linux] (http://rtomaszewski.blogspot.co.uk/2013/03/how-to-manually-create-shadow-password.html)
