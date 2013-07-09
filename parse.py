@@ -27,7 +27,7 @@ class ParseTsharkOut:
   protAux=1
    
   def __init__(self):
-    self.ipRe="Internet Protocol,(.*)$"
+    self.ipRe="Internet Protocol(.*)$"
     self.tcpRe=["Transmission Control Protocol,(.*)$", "    (\[Stream index:.*)$"]
     self.protRe=["Hypertext Transfer Protocol", "    ([^\[ ].*)$", "^$| *(\\\\r|\\\\n)"]
      
@@ -89,7 +89,7 @@ class ParseTsharkOut:
      
   def parse(self, s):
     funcs=[self.ipParse, self.tcpParse, self.protParse]
-     
+    
     if funcs[self.auxStart](s):
       self.auxStart= ( self.auxStart + 1 ) % 3
    
