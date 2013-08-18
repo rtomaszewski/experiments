@@ -37,3 +37,7 @@ Usualy it is not necessry to write code on such a low level. There is a python l
 
 ## shadow_pass.sh
  * [How to manually create shadow password for a user in Linux] (http://rtomaszewski.blogspot.co.uk/2013/03/how-to-manually-create-shadow-password.html)
+
+
+## dns-ptr-record.py
+ * [How to create a PTR DNS record on Rackspace Cloud] (http://rtomaszewski.blogspot.co.uk/2013/08/how-to-create-ptr-on-rackspace-cloud.html)
