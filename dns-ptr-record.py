@@ -11,6 +11,8 @@ pyrax.set_credential_file(creds_file, "LON")
 cs = pyrax.cloudservers
 dns = pyrax.cloud_dns
 
+# in this example we will add a PTR to a first cloud server
+# feel free to change it 
 l=cs.servers.list()
 server=l[0]
 
