@@ -1,0 +1,139 @@
+Origianl source:
+http://codepad.org/cQWjrZPK
+
+---
+
+Neutron Hands on Lab! 
+
+Slides: http://bit.ly/HBjTsg
+
+Lab Access: http://bit.ly/179X1GG
+
+
+# Source credentials file 
+source novarc
+
+# Create private network
+neutron net-create private
+
+# Associate subnet
+neutron subnet-create --name private_subnet private 10.0.0.0/24 
+
+# create router
+neutron router-create myrouter
+
+# uplink router to the public internet
+neutron router-gateway-set myrouter public 
+
+
+# uplink subnet to router
+neutron  router-interface-add myrouter private_subnet
+
+
+# create security profile for jump host
+ neutron  security-group-create jumphost 
+
+# Add rule to allow icmp in
+neutron  security-group-rule-create  --protocol icmp jumphost
+
+# Add rule to allow ssh in
+neutron  security-group-rule-create  --protocol tcp --port-range-min 22 --port-range-max 22  jumphost
+
+# Launch jump host: 
+nova boot --image cirros --flavor 1 jumphost --security_groups jumphost
+
+# Determine port-id attached to jump host
+neutron port-list -- --device_id=<instance_id> 
+
+# create floatingip
+neutron floatingip-create public --port-id <port-id> 
+
+
+# test ping/ssh 
+
+# create web security group
+neutron  security-group-create web
+
+# allow tcp 80 in 
+neutron security-group-rule-create  --protocol TCP --port-range-min 80 --port-range-max 80 web
+
+# allow ssh  from members of jumphost
+neutron security-group-rule-create --direction ingress --protocol TCP --port-range-min 22 --port-range-max 22 --remote-group-id jumphost web
+
+# boot two webservers
+nova boot --image cirros --flavor 1 webserver1 --security_groups web
+nova boot --image cirros --flavor 1 webserver2 --security_groups web
+
+# ssh to jump host
+ssh cirros@<floating-ip>
+password is: cubswin:)
+
+# ssh to webserver1
+ssh <webserver1-ip> 
+
+# start dummy webserver
+while true; do echo -e 'HTTP/1.0 200 OK\r\n\r\nweb_server1' | sudo nc -l -p 80 ; done  &
+
+# exit from webserver1 to jumphost
+exit
+
+# ssh to webserver2
+ssh <webserver2-ip>
+
+# start dummy webserver
+while true; do echo -e 'HTTP/1.0 200 OK\r\n\r\nweb_server2' | sudo nc -l -p 80 ; done &
+
+# exit from webserver2 to jumphost
+exit
+
+# curl <webserver1-ip>
+webserver1
+
+# curl <webserver2-ip>
+webserver2
+
+
+# create loadbalanacer pool
+neutron lb-pool-create --lb-method ROUND_ROBIN --name mypool --protocol HTTP --subnet-id private_subnet
+
+# Add webservers as memebers
+
+neutron  lb-member-create --address  <webserver_1_ip> --protocol-port 80 mypool
+neutron  lb-member-create --address  <webserver_2_ip> --protocol-port 80 mypool
+
+# create health monitor 
+ neutron  lb-healthmonitor-create --delay 3 --type HTTP --max-retries 3 --timeout 3
+
+# associate with pool
+neutron lb-healthmonitor-associate <heath-monitor-id> mypool 
+
+# create vip for loadbalaner 
+neutron   lb-vip-create --name myvip --protocol-port 80 --protocol HTTP --subnet-id  private_subnet mypool
+
+# associate floatingip to vip 
+neutron  floatingip-create public --port-id 8649eaf5-41d7-44a7-b51f-9cbede98380d
+
+# requests are now loadbalanced over vip ip:
+curl <vip-floatingip>
+
+
+## Firewall as a service 
+
+# Create a firewall policy
+neutron  firewall-policy-create default_policy
+
+# create firewall and attach policy. (Blocks all traffic)
+neutron  firewall-create default_policy
+
+# create rule to allow tcp 80 in 
+neutron  firewall-rule-create --protocol tcp --destination-port 80 --action allow --name allow_http
+
+# add rule to policy 
+neutron  firewall-policy-insert-rule default_policy allow_http
+
+# curl works again
+
+# test loadbalacner timeout 
+nova delete webserver1
+curl <vip-floatingip>
+only returns webserver2
