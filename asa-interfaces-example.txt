@@ -1,0 +1,250 @@
+fw1/pri/act# sh clock
+08:22:57.704 cst Mon Feb 24 2014
+fw1/pri/act# sh int
+Interface GigabitEthernet0/0 "outside", is up, line protocol is up
+  Hardware is i82546GB rev03, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        MAC address aaaa.aaaa.aaaa, MTU 1500
+        IP address 1.1.1.1, subnet mask 255.255.255.192
+        1304544011 packets input, 266663749968 bytes, 0 no buffer
+        Received 238303 broadcasts, 0 runts, 0 giants
+        104 input errors, 0 CRC, 0 frame, 104 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        1315876113 packets output, 943680519398 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 4 interface resets
+        0 late collisions, 0 deferred
+        9 input reset drops, 0 output reset drops, 0 tx hangs
+        input queue (blocks free curr/low): hardware (255/230)
+        output queue (blocks free curr/low): hardware (255/109)
+  Traffic Statistics for "outside":
+        1304451938 packets input, 241690167123 bytes
+        1315821750 packets output, 918993727104 bytes
+        9858639 packets dropped
+      1 minute input rate 920 pkts/sec,  171445 bytes/sec
+      1 minute output rate 917 pkts/sec,  661510 bytes/sec
+      1 minute drop rate, 4 pkts/sec
+      5 minute input rate 858 pkts/sec,  156504 bytes/sec
+      5 minute output rate 875 pkts/sec,  658079 bytes/sec
+      5 minute drop rate, 5 pkts/sec
+Interface GigabitEthernet0/1 "mwapp-dmz", is up, line protocol is up
+  Hardware is i82546GB rev03, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        MAC address bbbb.bbbb.bbbb, MTU 1500
+        IP address 172.30.0.1, subnet mask 255.255.252.0
+        2203544867 packets input, 1214305413133 bytes, 0 no buffer
+        Received 229307 broadcasts, 0 runts, 0 giants
+        1971 input errors, 0 CRC, 0 frame, 1971 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        2174454722 packets output, 688313076839 bytes, 2831 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 5 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops, 0 tx hangs
+        input queue (blocks free curr/low): hardware (255/230)
+        output queue (blocks free curr/low): hardware (255/0)
+  Traffic Statistics for "mwapp-dmz":
+        2203544868 packets input, 1172970966973 bytes
+        2174457553 packets output, 646482050625 bytes
+        971830 packets dropped
+      1 minute input rate 4257 pkts/sec,  1473306 bytes/sec
+      1 minute output rate 4348 pkts/sec,  1885495 bytes/sec
+      1 minute drop rate, 1 pkts/sec
+      5 minute input rate 3103 pkts/sec,  1224323 bytes/sec
+      5 minute output rate 3167 pkts/sec,  1306932 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface GigabitEthernet0/2 "UAT", is up, line protocol is up
+  Hardware is i82546GB rev03, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        MAC address cccc.cccc.cccc, MTU 1500
+        IP address 172.27.0.1, subnet mask 255.255.252.0
+        87006406 packets input, 8314083585 bytes, 0 no buffer
+        Received 2616 broadcasts, 0 runts, 0 giants
+        1 input errors, 0 CRC, 0 frame, 1 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        80290600 packets output, 21286340673 bytes, 6860 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 5 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops, 0 tx hangs
+        input queue (blocks free curr/low): hardware (255/230)
+        output queue (blocks free curr/low): hardware (255/0)
+  Traffic Statistics for "UAT":
+        87006411 packets input, 6744673553 bytes
+        80297460 packets output, 19844693255 bytes
+        65364 packets dropped
+      1 minute input rate 212 pkts/sec,  36135 bytes/sec
+      1 minute output rate 183 pkts/sec,  11355 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 211 pkts/sec,  36124 bytes/sec
+      5 minute output rate 182 pkts/sec,  11313 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface GigabitEthernet0/3 "state-failover", is up, line protocol is up
+  Hardware is i82546GB rev03, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        Description: STATE Failover Interface
+        MAC address dddd.dddd.dddd, MTU 1500
+        IP address 172.16.99.1, subnet mask 255.255.255.252
+        2680581 packets input, 286963486 bytes, 0 no buffer
+        Received 172 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        42074827 packets output, 46322035220 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 13 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops, 0 tx hangs
+        input queue (blocks free curr/low): hardware (255/249)
+        output queue (blocks free curr/low): hardware (255/154)
+  Traffic Statistics for "state-failover":
+        2557912 packets input, 220762596 bytes
+        41962779 packets output, 45552626500 bytes
+        0 packets dropped
+      1 minute input rate 1 pkts/sec,  94 bytes/sec
+      1 minute output rate 37 pkts/sec,  41625 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 1 pkts/sec,  94 bytes/sec
+      5 minute output rate 36 pkts/sec,  41543 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface Management0/0 "lan-failover", is up, line protocol is up
+  Hardware is i82557, BW 100 Mbps, DLY 100 usec
+        Auto-Duplex(Full-duplex), Auto-Speed(100 Mbps)
+        Input flow control is unsupported, output flow control is unsupported
+        Description: LAN Failover Interface
+        MAC address eeee.eeee.eeee, MTU 1500
+        IP address 172.16.100.1, subnet mask 255.255.255.252
+        3367020 packets input, 454448880 bytes, 0 no buffer
+        Received 688 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        3366749 packets output, 480878922 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 babbles, 0 late collisions, 0 deferred
+        3 lost carrier, 0 no carrier
+        0 input reset drops, 0 output reset drops
+        input queue (curr/max packets): hardware (0/1) software (0/48)
+        output queue (curr/max packets): hardware (0/16) software (0/1)
+  Traffic Statistics for "lan-failover":
+        3245068 packets input, 390606262 bytes
+        3244632 packets output, 417618464 bytes
+        0 packets dropped
+      1 minute input rate 1 pkts/sec,  176 bytes/sec
+      1 minute output rate 1 pkts/sec,  189 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 1 pkts/sec,  174 bytes/sec
+      5 minute output rate 1 pkts/sec,  187 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+        Management-only interface. Blocked 0 through-the-device packets
+
+Interface GigabitEthernet1/0 "mv-inside", is up, line protocol is up
+  Hardware is VCS7380 rev01, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        Media-type configured as RJ45 connector
+        MAC address fffff.ffff.ffff, MTU 1500
+        IP address 172.31.0.1, subnet mask 255.255.252.0
+        538970785 packets input, 189797172934 bytes, 0 no buffer
+        Received 3167 broadcasts, 0 runts, 0 giants
+        756 input errors, 0 CRC, 0 frame, 756 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        564346002 packets output, 137603523999 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 rate limit drops
+        0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (0/0)
+        output queue (blocks free curr/low): hardware (0/0)
+  Traffic Statistics for "mv-inside":
+        538017507 packets input, 179048624204 bytes
+        564385289 packets output, 127113518352 bytes
+        82115 packets dropped
+      1 minute input rate 3175 pkts/sec,  1569759 bytes/sec
+      1 minute output rate 3113 pkts/sec,  741885 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 2077 pkts/sec,  1017828 bytes/sec
+      5 minute output rate 2028 pkts/sec,  505062 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface GigabitEthernet1/1 "app-insde", is up, line protocol is up
+  Hardware is VCS7380 rev01, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        Media-type configured as RJ45 connector
+        MAC address 1111.1111.1111, MTU 1500
+        IP address 172.29.0.1, subnet mask 255.255.252.0
+        315653794 packets input, 237353591494 bytes, 0 no buffer
+        Received 16503 broadcasts, 0 runts, 0 giants
+        1052 input errors, 0 CRC, 0 frame, 1052 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        303003248 packets output, 125098088305 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 rate limit drops
+        0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (0/0)
+        output queue (blocks free curr/low): hardware (0/0)
+  Traffic Statistics for "app-insde":
+        314619677 packets input, 231494546089 bytes
+        303019613 packets output, 119329546518 bytes
+        75329 packets dropped
+      1 minute input rate 203 pkts/sec,  143426 bytes/sec
+      1 minute output rate 201 pkts/sec,  93075 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 185 pkts/sec,  132077 bytes/sec
+      5 minute output rate 176 pkts/sec,  84919 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface GigabitEthernet1/2 "", is administratively down, line protocol is down
+  Hardware is VCS7380 rev01, BW 1000 Mbps, DLY 10 usec
+        Auto-Duplex, Auto-Speed
+        Input flow control is unsupported, output flow control is off
+        Media-type configured as RJ45 connector
+        Available but not configured via nameif
+        MAC address 2222.2222.2222, MTU not set
+        IP address unassigned
+        0 packets input, 0 bytes, 0 no buffer
+        Received 0 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        0 packets output, 0 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 rate limit drops
+        0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (0/0)
+        output queue (blocks free curr/low): hardware (0/0)
+Interface GigabitEthernet1/3 "", is administratively down, line protocol is down
+  Hardware is VCS7380 rev01, BW 1000 Mbps, DLY 10 usec
+        Auto-Duplex, Auto-Speed
+        Input flow control is unsupported, output flow control is off
+        Media-type configured as RJ45 connector
+        Available but not configured via nameif
+        MAC address 3333.3333.3333, MTU not set
+        IP address unassigned
+        0 packets input, 0 bytes, 0 no buffer
+        Received 0 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        0 packets output, 0 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 rate limit drops
+        0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (0/0)
+        output queue (blocks free curr/low):
