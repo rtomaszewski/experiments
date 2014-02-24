@@ -29,7 +29,7 @@ Interface GigabitEthernet0/0 "outside", is up, line protocol is up
       5 minute input rate 858 pkts/sec,  156504 bytes/sec
       5 minute output rate 875 pkts/sec,  658079 bytes/sec
       5 minute drop rate, 5 pkts/sec
-Interface GigabitEthernet0/1 "mwapp-dmz", is up, line protocol is up
+Interface GigabitEthernet0/1 "dmz", is up, line protocol is up
   Hardware is i82546GB rev03, BW 1000 Mbps, DLY 10 usec
         Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
         Input flow control is unsupported, output flow control is off
@@ -47,7 +47,7 @@ Interface GigabitEthernet0/1 "mwapp-dmz", is up, line protocol is up
         0 input reset drops, 0 output reset drops, 0 tx hangs
         input queue (blocks free curr/low): hardware (255/230)
         output queue (blocks free curr/low): hardware (255/0)
-  Traffic Statistics for "mwapp-dmz":
+  Traffic Statistics for "dmz":
         2203544868 packets input, 1172970966973 bytes
         2174457553 packets output, 646482050625 bytes
         971830 packets dropped
@@ -57,7 +57,7 @@ Interface GigabitEthernet0/1 "mwapp-dmz", is up, line protocol is up
       5 minute input rate 3103 pkts/sec,  1224323 bytes/sec
       5 minute output rate 3167 pkts/sec,  1306932 bytes/sec
       5 minute drop rate, 0 pkts/sec
-Interface GigabitEthernet0/2 "UAT", is up, line protocol is up
+Interface GigabitEthernet0/2 "myapp1", is up, line protocol is up
   Hardware is i82546GB rev03, BW 1000 Mbps, DLY 10 usec
         Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
         Input flow control is unsupported, output flow control is off
@@ -75,7 +75,7 @@ Interface GigabitEthernet0/2 "UAT", is up, line protocol is up
         0 input reset drops, 0 output reset drops, 0 tx hangs
         input queue (blocks free curr/low): hardware (255/230)
         output queue (blocks free curr/low): hardware (255/0)
-  Traffic Statistics for "UAT":
+  Traffic Statistics for "myapp1":
         87006411 packets input, 6744673553 bytes
         80297460 packets output, 19844693255 bytes
         65364 packets dropped
@@ -146,7 +146,7 @@ Interface Management0/0 "lan-failover", is up, line protocol is up
       5 minute drop rate, 0 pkts/sec
         Management-only interface. Blocked 0 through-the-device packets
 
-Interface GigabitEthernet1/0 "mv-inside", is up, line protocol is up
+Interface GigabitEthernet1/0 "inside", is up, line protocol is up
   Hardware is VCS7380 rev01, BW 1000 Mbps, DLY 10 usec
         Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
         Input flow control is unsupported, output flow control is off
@@ -166,7 +166,7 @@ Interface GigabitEthernet1/0 "mv-inside", is up, line protocol is up
         0 input reset drops, 0 output reset drops
         input queue (blocks free curr/low): hardware (0/0)
         output queue (blocks free curr/low): hardware (0/0)
-  Traffic Statistics for "mv-inside":
+  Traffic Statistics for "inside":
         538017507 packets input, 179048624204 bytes
         564385289 packets output, 127113518352 bytes
         82115 packets dropped
@@ -176,7 +176,7 @@ Interface GigabitEthernet1/0 "mv-inside", is up, line protocol is up
       5 minute input rate 2077 pkts/sec,  1017828 bytes/sec
       5 minute output rate 2028 pkts/sec,  505062 bytes/sec
       5 minute drop rate, 0 pkts/sec
-Interface GigabitEthernet1/1 "app-insde", is up, line protocol is up
+Interface GigabitEthernet1/1 "app2", is up, line protocol is up
   Hardware is VCS7380 rev01, BW 1000 Mbps, DLY 10 usec
         Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
         Input flow control is unsupported, output flow control is off
@@ -196,7 +196,7 @@ Interface GigabitEthernet1/1 "app-insde", is up, line protocol is up
         0 input reset drops, 0 output reset drops
         input queue (blocks free curr/low): hardware (0/0)
         output queue (blocks free curr/low): hardware (0/0)
-  Traffic Statistics for "app-insde":
+  Traffic Statistics for "app2":
         314619677 packets input, 231494546089 bytes
         303019613 packets output, 119329546518 bytes
         75329 packets dropped
