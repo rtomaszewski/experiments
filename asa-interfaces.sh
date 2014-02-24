@@ -19,6 +19,11 @@ for i in *.txt; do
   cd ..
 done
 
+
+echo
+echo
+echo
+
 ## 2
 
 # analyze the data and generate stats based on a single line from
