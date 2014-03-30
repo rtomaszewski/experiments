@@ -29,7 +29,10 @@ int main(void) {
 
     // is the var defined at all
     if ( ! is_enabled ) {
-        printf("%s: the variable %s is not set, set it to 'no' to surpress this message\n", PROGRAM_NAME, TYPE_CMD_ENABLED);
+        printf("%s: the variable %s is not set, set it to 'no' to surpress this message; set the %s for the command to type\n", 
+                PROGRAM_NAME, TYPE_CMD_ENABLED, TYPE_CMD_TYPE);
+        printf("\n Example: export %s=yes; export %s=date\n", TYPE_CMD_ENABLED, TYPE_CMD_TYPE);
+
         return 0;
 
     // has the variable value different than 'yes'
