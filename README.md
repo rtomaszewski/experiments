@@ -44,3 +44,7 @@ Usualy it is not necessry to write code on such a low level. There is a python l
 
 ## asa-interfaces.sh
  * [Dirty trick how to analysis ASA performance based on interface overruns and underruns] (http://rtomaszewski.blogspot.co.uk/2014/02/dirty-trick-how-to-analysis-asa.html)
+
+## type-command.c
+ * [How to automatically prefill command on the Linux bash] (http://rtomaszewski.blogspot.co.uk/2014/03/how-to-automatically-prefill-command-on.html)
+
